@@ -6,7 +6,9 @@
 	"scripts": {
 		"dev": "nodemon --exec ts-node src/server.ts",
 		"start": "node dist/server.js",
-		"build": "tsc"
+		"build": "tsc",
+		"prebuild": "rimraf dist",
+		"postbuild": "echo 'Build completed!'"
 	},
 	"keywords": [],
 	"author": "",
@@ -23,6 +25,7 @@
 		"@types/node": "^18.15.11",
 		"@types/socket.io": "^3.0.2",
 		"nodemon": "^3.0.2",
+		"rimraf": "^5.0.10",
 		"ts-node": "^10.9.1",
 		"typescript": "^4.9.5"
 	}
